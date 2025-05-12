@@ -1,0 +1,17 @@
+{
+    parserClass = "me.moamenhredeen.intellijloxplugin.parser.LoxParser"
+    extends = "com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+    psiClassPrefix = "Lox"
+    psiImplClassSuffix = "Impl"
+    psiPackage = "me.moamenhredeen.intellijloxplugin.psi"
+    psiImplPackage = "me.moamenhredeen.intellijloxplugin.psi.impl"
+
+    elementTypeHolderClass = "me.moamenhredeen.intellijloxplugin.psi.LoxTypes"
+    elementTypeClass = "me.moamenhredeen.intellijloxplugin.psi.LoxElementType"
+    tokenTypeClass = "me.moamenhredeen.intellijloxplugin.psi.LoxTokenType"
+}
+
+loxFile ::= item_*
+private item_ ::= (property|COMMENT|CRLF)
+property ::= (KEY? SEPERATOR VALUE?) | KEY

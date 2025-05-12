@@ -1,0 +1,32 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>me.moamenhredeen.intellij-lox-plugin</id>
+    <name>Lox</name>
+    <vendor url="https://moamenhredeen.me">moamenhredeen</vendor>
+    <description>Lox (from CraftingInterpreters) Language support for Intellij IDE</description>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Lox File" implementationClass="me.moamenhredeen.intellijloxplugin.LoxFileType" fieldName="INSTANCE" language="Lox" extensions="lox"/>
+        <lang.parserDefinition language="Lox" implementationClass="me.moamenhredeen.intellijloxplugin.LoxParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="Lox" implementationClass="me.moamenhredeen.intellijloxplugin.LoxSyntaxHighlighterFactory"/>
+        <iconProvider implementation="me.moamenhredeen.intellijloxplugin.LoxIconProvider"/>
+<!--        <colorSettingsPage implementation="org.intellij.sdk.language.SimpleColorSettingsPage"/>-->
+<!--        <annotator language="JAVA" implementationClass="org.intellij.sdk.language.SimpleAnnotator"/>-->
+<!--        <codeInsight.lineMarkerProvider language="JAVA" implementationClass="org.intellij.sdk.language.SimpleLineMarkerProvider"/>-->
+<!--        <completion.contributor language="Simple" implementationClass="org.intellij.sdk.language.SimpleCompletionContributor"/>-->
+<!--        <psi.referenceContributor language="JAVA" implementation="org.intellij.sdk.language.SimpleReferenceContributor"/>-->
+<!--        <lang.refactoringSupport language="Simple" implementationClass="org.intellij.sdk.language.SimpleRefactoringSupportProvider"/>-->
+<!--        <lang.findUsagesProvider language="Simple" implementationClass="org.intellij.sdk.language.SimpleFindUsagesProvider"/>-->
+<!--        <lang.foldingBuilder language="JAVA" implementationClass="org.intellij.sdk.language.SimpleFoldingBuilder"/>-->
+<!--        <gotoSymbolContributor implementation="org.intellij.sdk.language.SimpleChooseByNameContributor"/>-->
+<!--        <lang.psiStructureViewFactory language="Simple" implementationClass="org.intellij.sdk.language.SimpleStructureViewFactory"/>-->
+<!--        <navbar implementation="org.intellij.sdk.language.SimpleStructureAwareNavbar"/>-->
+<!--        <lang.formatter language="Simple" implementationClass="org.intellij.sdk.language.SimpleFormattingModelBuilder"/>-->
+<!--        <codeStyleSettingsProvider implementation="org.intellij.sdk.language.SimpleCodeStyleSettingsProvider"/>-->
+<!--        <langCodeStyleSettingsProvider implementation="org.intellij.sdk.language.SimpleLanguageCodeStyleSettingsProvider"/>-->
+<!--        <lang.commenter language="Simple" implementationClass="org.intellij.sdk.language.SimpleCommenter"/>-->
+<!--        <lang.documentationProvider language="Simple" implementationClass="org.intellij.sdk.language.SimpleDocumentationProvider"/>-->
+<!--        <spellchecker.support language="Simple" implementationClass="org.intellij.sdk.language.SimpleSpellcheckingStrategy"/>-->
+    </extensions>
+</idea-plugin>
